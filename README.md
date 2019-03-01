@@ -12,5 +12,5 @@
 The following shell statement show the most simple execution of the provided image.
 
 ```bash
-docker run --rm --tty --interactive clouto/ruby-nodejs
+docker run --rm --tty --interactive clouto/ubuntu-ruby-nodejs
 ```
