@@ -12,8 +12,11 @@ RUN git clone https://github.com/rbenv/rbenv /usr/local/rbenv \
   && git clone https://github.com/rbenv/ruby-build /usr/local/rbenv/plugins/ruby-build
 
 ENV RBENV_ROOT /usr/local/rbenv
-ENV PATH ${RBENV_ROOT}/bin:${PATH}
-RUN eval "$(rbenv init --no-rehash -)"
+
+RUN echo 'export PATH="$RBENV_ROOT/bin:$PATH"' >> ~/.bashrc \
+    && echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+
+ENV PATH $RBENV_ROOT/bin:$PATH
 
 RUN rbenv install 2.6.3 \
   && rbenv global 2.6.3 \
