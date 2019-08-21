@@ -3,9 +3,9 @@
 | | version |
 |:---:|:---:|
 | ubuntu | 18.04 |
-| ruby | 2.6.1 |
-| node.js | 11.10.1 |
-| npm | 6.7.0 |
+| ruby | 2.6.3 |
+| node.js | 10.16.0 |
+| npm | 6.9.0 |
 
 # Usage
 

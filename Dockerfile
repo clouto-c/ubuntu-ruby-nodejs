@@ -15,8 +15,8 @@ ENV RBENV_ROOT /usr/local/rbenv
 ENV PATH ${RBENV_ROOT}/bin:${PATH}
 RUN eval "$(rbenv init --no-rehash -)"
 
-RUN rbenv install 2.6.1 \
-  && rbenv global 2.6.1 \
+RUN rbenv install 2.6.3 \
+  && rbenv global 2.6.3 \
   && rbenv rehash
 
 RUN rbenv exec gem install bundler
@@ -28,5 +28,5 @@ RUN apt-get install -y software-properties-common nodejs npm
 RUN npm install n -g
 RUN npm install -g ansi
 RUN ln -sf /usr/local/bin/node /usr/bin/node
-RUN n stable \
-  && npm install -g yarn
+RUN n 10.16.0 \
+  && npm install -g yarn@1.16.0
